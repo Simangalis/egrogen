@@ -1,0 +1,21 @@
+
+.droneBanner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.droneBanner__container{
+    position: relative;
+    width: 100%;
+}
+
+.droneBanner__container-bg img{
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+
+

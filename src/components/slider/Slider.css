@@ -1,0 +1,121 @@
+.slider {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+.slide {
+    position: absolute;
+    margin-top: -250px;
+    top: 0;
+    left: 100%; 
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%); 
+    transition: all 2s ease; 
+    cursor: pointer;
+   
+}
+.btn {
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+@media screen and (min-width: 600px) {
+    .slide img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.slide img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    opacity: 0;
+    width: 50%;
+    padding: 3rem;
+    background: #16682D;
+    border: 1px solid yellow;
+    animation: slide-in 1s ease 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(50%); /* Start slightly off to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End in normal position */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        width: 80%;
+    }
+    .arrow{
+        display: none;
+    }
+
+    .slide {
+        margin-top: -350px;
+    }
+
+}
+
+.content > * {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.current {
+    opacity: 1;
+    transform: translateX(0); /* When active, slide is in the correct position */
+    left: 0; /* Position the current slide in view */
+}
+
+.current .content {
+    opacity: 1;
+}
+
+.arrow {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    top: 40%;
+    background: transparent;
+    color: #fff;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 999;
+}
+
+.arrow:hover {
+    background: #fff;
+    color: #777;
+}
+
+.next {
+    right: 1.5rem;
+}
+
+.prev {
+    left: 1.5rem;
+}
+
+hr {
+    height: 2px;
+    background: #fff;
+    width: 50%;
+}

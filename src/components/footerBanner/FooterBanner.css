@@ -1,0 +1,39 @@
+
+.footerBanner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+  
+  .footerBanner__container {
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+  
+  }
+
+  .footerBanner__container-background{
+    background-color: white;
+     height: 60px;
+
+  }
+
+  
+  
+  .footerBanner__container-bg img {
+    width: 100%;
+    height: 50px;
+    opacity: 90%;
+    
+  }
+  
+
+ 
+  
+ 
+ 
+
+  

@@ -1,0 +1,121 @@
+#services{
+    padding: 30px;
+    margin-top: 130px;
+}
+
+#services .title {
+    text-align: center;
+    margin-top: -130px;
+  }
+  
+  #services .services__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 40px;
+  }
+  
+  #services .services__container .service__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+   
+  }
+  
+  #services .services__container .service__list li {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+ 
+  #services .project__card {
+    background: var(--color-ui-secondary);
+    padding: 15px;
+    border-radius: var(--radius-2);
+    transition: var(--transition);
+    border: 1px solid yellowgreen;
+  }
+
+  .services__container ul li {
+    font-size: 1rem;
+    font-weight: 200;
+}
+  
+  #services .project__card:hover img {
+    transform: scale(1.2);
+    
+  }
+  
+  #services .project__card .image__container {
+    border-radius: var(--radius-4);
+    height: 230px;
+    overflow: hidden;
+  }
+  
+  #services .project__card .name {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0;
+  }
+  
+  #services .project__card .description {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(100px, 1fr)); 
+    gap: 10px;
+   
+  }
+
+  #services .project__card .description ul li{
+    font-size: 5rem;
+  }
+  
+  #services .project__card .buttons {
+    margin: 40px 0 20px 0;
+  }
+
+.buttons .btn{
+    color: white;
+   
+  }
+
+  .buttons .btn:hover{
+    border: 1px solid white;
+  }
+  
+  #services .project__card.zoom__in {
+    animation: zoomIn 600ms ease;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      scale: 0.5;
+    }
+    100% {
+      scale: 1;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    #services .services__container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #services .services__container {
+      grid-template-columns: 100%;
+      gap: 1rem;
+    }
+    #services .title {
+      margin-top: -80px;
+      font-size: 2rem;
+
+    }
+    #services{
+        padding: 30px;
+        margin-top: 50px;
+    }
+  }
+  

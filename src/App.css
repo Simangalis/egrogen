@@ -1,0 +1,505 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sora:wght@100..800&display=swap');
+
+
+:root{
+    --color-primary:green;
+    --color-primary-accent:lime;
+    --color-success:#33c648;
+    --color-warning:#ffbb55;
+    --color-white:#ffffff; 
+    --color-text:#111111;
+    --color-muted: #a0a0a4;
+    --radius-1:4px;
+    --radius-2:0.8rem;
+    --radius-3:1.2rem;
+    --radius-4:2rem;
+    --radius-5:100%;
+    --transition:all 800ms ease;
+    --color-ui-primary: #0A0A0C;
+    --color-ui-secondary: #171719;
+    --color-ui-variant: #1f1f21;
+    --gradient-1:linear-gradient(to right, var(--color-primary) 0%, var(--color-primary-accent) 100%);
+    --gradient-2:linear-gradient(190deg,var(--color-primary) 0%,rgba(18, 82, 78,.5) 100%);
+    --glow-1: radial-gradient(rgba(18, 82, 78,0.5) 0%, rgba(0, 0, 0,0.5));
+  }
+
+  .g-text{
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .h-text {
+    background: linear-gradient(45deg, #ffffff, #ffffff); /* Strong yellow gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text__muted{
+    color: var(--color-muted);
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+  }
+
+
+  p{
+    font-size: 15px;
+    font-weight:400px;
+    line-height: 21px;
+  }
+  
+  img{
+    width: 100%;
+    object-fit: cover;
+    min-height: 100%;
+    display: block;
+    transform: var(--transition);
+  }
+  
+
+  *{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none; 
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) transparent;
+  }
+
+  html, body{
+    min-height: 100vh;
+    font-family: "Sora", sans-serif;
+    color: var(--color-white);
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+    background: var(--color-ui-variant);
+  }
+
+ 
+  body{
+    overflow: hidden;
+    overflow-y: auto;
+    max-width: 2000px;
+    margin: auto;
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  ul li{
+    list-style: none;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1800px;
+  }
+
+  .btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 1rem 1.2rem;
+    border: 1px solid white;
+    border-radius: var(--radius-2);
+    background: var(--color-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .contact__btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid white; 
+    border-radius: var(--radius-2);
+    background: var(--color-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-white);
+  }
+
+  .btn:hover{
+    background: var(--color-ui-variant);
+   
+  }
+
+  /*.... Nav Bar Style ... */
+nav{
+  background: rgba(0, 0, 0, 0.7); /* Black with 70% opacity *//* Neutral with 70% opacity */
+  backdrop-filter: blur(10px); /* Ensure proper syntax for backdrop blur */
+  height: 5.5rem;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.active-link {
+  text-decoration: underline;
+  text-decoration-color: var(--color-success);
+  text-decoration-thickness: 2px;
+  text-decoration-style: solid;
+  text-underline-offset: 5px;
+}
+
+.no-underline {
+  text-decoration: none !important; /* Disable underline */
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-menu{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  
+  
+}
+
+.text-container .name{
+  color: white;
+}
+
+.nav-menu.hide {
+  display: none; /* Hidden on mobile initially */
+}
+
+.nav-menu.show {
+  display: flex;
+
+}
+
+/* Hide the toggle button on larger screens */
+.nav-toggle-button {
+  display: none; /* Hide by default */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 1024px) {
+  .nav-menu {
+      flex-direction: column; /* Stack links in a column on mobile */
+      position: absolute;
+      right: 0;
+      top: 5.5rem;
+      background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity *//* Neutral with 70% opacity */
+      backdrop-filter: blur(10px);
+      width: 100%;
+      padding: 1rem;
+      transition: var(--transition);
+      align-items: center; /* Center align items horizontally */
+      gap: 1.5rem; /* Adjust gap for better spacing */
+  }
+  
+  .nav-menu.show {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact__btn {
+    margin-top: 1rem; /* Add spacing for contact button on mobile */
+    align-self: center; /* Center the button */
+    
+  }
+  
+  .nav-toggle-button {
+    display: block; /* Show toggle button only on mobile */
+
+    
+  }
+  
+}
+
+.nav-menu li a{
+  color: var(--color-white);
+  transition: var(--transition);
+  text-align: center; /* Ensure the text inside the <a> is centered */
+  display: block; /* Make the link take full width */
+  width: 100%; /* Ensure links take full width for better touch targets on mobile */
+}
+
+.nav-menu li a:hover{
+  color: var(--color-primary);
+}
+
+.nav-toggle-button{
+  background: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: none; /* Remove default border */
+  padding: 0.5rem 1rem; /* Add padding for better touch area */
+  border-radius: 4px; /* Optional: Add border-radius for better aesthetics */
+}
+
+
+  /*... Logo ..*/
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-image {
+    width: 60px; /* Ensure the image is visible */
+    height: 60px;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+}
+
+.name {
+    font-size: 1.2rem;
+    margin: 0; /* Remove default margin */
+}
+
+.logo p{
+    color: var(--color-success);
+}
+
+ /*... Home styling ..*/
+ .home{
+    background-image: url('/bg-electric.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+ }
+
+  /*... About Us styling ..*/
+ 
+  .about__wrapper{
+    margin: 50px;
+    background: var(--color-ui-variant);
+  }
+  .about__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about__story-container,
+  .about__vision-container,
+  .about__approach-container,
+  .about__mission-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .about__story-container,
+  .about__approach-container {
+    flex-direction: row;
+  }
+  
+  .about__vision-container,
+  .about__mission-container {
+    flex-direction: row-reverse;
+  }
+  
+  /* Adjust image and content to each take 50% of the space */
+  .about__section-image,
+  .about__section-content {
+    flex: 1;
+    margin-bottom: 50px;
+  }
+  
+  /* Image Styling */
+  .about__section-image {
+    overflow: hidden;
+    transition: transform var(--transition);
+  }
+
+  .about__story .about__story-container .about__section-image img{
+    width: 80%;
+    height: 100%;
+    border-radius:0%;
+  }
+
+  .about__section-content h1{
+    text-decoration: none;
+    
+  }
+
+  .about__section-content p{
+    border-bottom: 0px solid var(--color-success);
+    font-weight: 200;
+  }
+  
+  .about__section-image img {
+    width: 70%;
+    height: 50%;
+    object-fit: contain;
+    border: solid 2px white;
+    background-color: var(--color-success);
+    border-radius: 50%;
+   
+  }
+  /* Reset skew on hover */
+
+  /* Content styling */
+  .about__section-content h1 {
+    margin-bottom: 1rem;
+    color: var(--color-success);
+    font-size: 2rem;
+  }
+  
+  .about__section-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .about__story-container,
+    .about__vision-container,
+    .about__approach-container,
+    .about__mission-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about__section-image img {
+      height: auto;
+      
+    }
+
+    .about__section-content h1{
+      font-size: 1.5rem;
+      margin-top: -100px;
+    }
+  }
+
+
+  /*.... Footer Styling ... */
+  footer{
+    background: var(--color-ui-primary);
+    margin-top: 4rem;
+    padding: 2rem 6rem;
+  }
+
+  footer .row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 5px;
+  }
+
+  footer .routes__name{
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--color-success);
+    
+}
+
+footer .routes__container .route__item{
+  color: var(--color-white);
+  transition: var(transition);
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin: 5px 0;
+  cursor: pointer;
+  display: block;
+}
+
+footer .routes__container .route__item:hover{
+  color: var(--color-success);
+}
+
+footer .copyright_egrogen{
+  color: var(--color-success);
+}
+
+footer .social__icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-white); /* Adjust color as needed */
+}
+
+footer .social__icon:hover {
+  color: var(--color-success) /* Change color on hover */
+}
+
+@media(max-width:900px){
+  footer .row{
+      grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:768px){
+  footer .row{
+      grid-template-columns: 100%;
+  }
+  footer .row .column{
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      align-items: center;
+  }
+
+  footer .routes__name{
+      font-size: 16px;
+      margin-bottom: 5px;
+  }
+
+  footer{
+   
+    padding: 2rem 2rem;
+  }
+
+}
+
+  .footer-links{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    
+  }
+  .footer-links li a{
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: .6rem 1.4rem;
+    border-radius: var(--radius-2);
+    transition: var(--transition);
+  
+  }
+
+  .footer-links li a:hover{
+    background: var(--color-white);
+    color: var(--color-ui-primary);
+  }
+
+  .footer-copyright {
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--color-white);
+    border-top: 1px solid var(--color-success);
+    font-weight: 300;
+    
+  }
+

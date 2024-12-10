@@ -1,0 +1,188 @@
+/* Default desktop styles */
+
+.pumpStationPage__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pumpStationPage__content h2 {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  
+  .pumpStationPage__container p {
+    max-width: 600px;
+    text-align: center;
+    font-weight: 200;
+  }
+  
+  .pumpStationPage__items {
+    margin-top: 30px;
+  }
+  
+  .pumpStationPage__items .react-tabs__tab-list {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tabPanel__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F7F8FC;
+  }
+  
+  .tabPanel__content {
+    width: 50%;
+    padding-right: 20px;
+  }
+  
+  .tabPanel__content .title {
+    padding-left: 1rem;
+    font-weight: 800;
+  }
+  
+  .tabPanel__content .paragraph {
+    color: black;
+    font-weight: 400;
+  }
+  
+  .tabPanel__content .heading {
+    color: black;
+    font-weight: 700;
+    padding-left: 1rem;
+  }
+  
+  .tabPanel__content .list-services {
+    color: black;
+    font-weight: 400;
+    padding-left: 1rem;
+  }
+  
+  .tabPanel__content .buttons {
+    padding-left: 1rem;
+  }
+  
+  .tabPanel__content-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tabPanel__content-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: var(--radius-3);
+  }
+  
+  .react-tabs {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .react-tabs__tab-list {
+    border-bottom: 1px solid var(--color-primary-accent);
+    margin: 0 0 10px;
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    margin-top: 50px;
+  }
+  
+  .tabPanel__content .paragraph {
+    text-align: left;
+    margin: 30px;
+  }
+  
+  .tabPanel__content .heading {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .list-services li {
+    font-weight: 200;
+  }
+  
+  .react-tabs__tab {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .react-tabs__tab--selected {
+    background: #fff;
+    border: 2px solid var(--color-primary-accent);
+    color: black;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .react-tabs__tab-panel {
+    display: none;
+  }
+  
+  .react-tabs__tab-panel--selected {
+    display: block;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .pumpStationPage__container p {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+  
+    .pumpStationPage__items .react-tabs__tab-list {
+        gap: 1rem;
+    }
+  
+    .tabPanel__wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+  
+    .tabPanel__content,
+    .tabPanel__content-image {
+        width: 100%;
+        padding: 0;
+    }
+  
+    .tabPanel__content .title,
+    .tabPanel__content .heading,
+    .tabPanel__content .list-services,
+    .tabPanel__content .buttons {
+        padding-left: 0.5rem;
+    }
+  
+    .pumpStationPage__content h2 {
+        font-size: 1.2rem;
+    }
+  
+    .tabPanel__content .heading {
+        font-size: 1.1rem;
+    }
+  
+    .title {
+        font-size: 1.3rem;
+    }
+  
+    .tabPanel__content .paragraph {
+        margin: 15px;
+    }
+  }
+  

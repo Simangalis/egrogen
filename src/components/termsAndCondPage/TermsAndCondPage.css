@@ -1,0 +1,31 @@
+
+.termsAndCondPage__container{
+    color: white;
+    background-color:var(--color-text);
+    padding: 2rem;
+    border-bottom: 50px solid white;
+    
+    
+}
+
+.termsAndCondPage__title h2{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+.termsAndCondPage__content h3{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+   
+    
+}
+
+.termsAndCondPage__content ul li,p{
+    font-weight: 200;
+    padding-bottom: 0.3rem;
+    list-style-type: disc;
+    list-style-position: inside;
+   
+
+}

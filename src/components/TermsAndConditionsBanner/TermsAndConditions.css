@@ -1,0 +1,20 @@
+
+.termsAndConditions{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.termsAndConditions__container{
+    position: relative;
+    width: 100%;
+}
+.termsAndConditions__container-bg img{
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+
+
